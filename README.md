@@ -1,3 +1,3 @@
 # ECE-Night 2019
 
-A demo version is running at `https://chchen.pythonanywhere.com`
+A beta version is running at [https://chchen.pythonanywhere.com](https://chchen.pythonanywhere.com).
