@@ -1,0 +1,66 @@
+.mynav {
+	background-image: url('navbg.jpg');
+	width:100%;
+}
+@media screen and (min-width:993px) {
+.dropdown-menu {
+  display:none;
+}
+}
+
+@media screen and (max-width:992px) {
+.right.hide-on-med-and-down {
+  display:none;
+}
+
+.dropdown-menu {
+  position: relative;
+  width:100%;
+}
+.dropdown-menu > ul {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  transition: visibility 0.5s;
+  opacity: 0;
+}
+.dropdown-menu > span:focus ~ ul {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-menu > div {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.dropdown-menu > span:focus ~ div {
+  display: block;
+}
+.dropdown-menu > span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.dropdown-menu > span,
+.dropdown-menu > div {
+  cursor: pointer;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ul {
+	width:100%;
+}
+li {
+	color: #e53935;
+	background-color:#000000;
+	opacity: 0.85;
+	text-align: center;
+	width:100%;
+	font-size:2px !important;
+}
+}

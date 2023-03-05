@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>電祭 惦記 - 2019交大電機之夜</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'leaderboard/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'leaderboard/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'leaderboard/css/base.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="shortcut icon" href="{% static 'leaderboard/media/sakura.png' %}">
+
+  {% block header %}
+  {% endblock %}
+
+</head>
+<body>
+  <nav class="red darken-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo"><img src="{% static 'leaderboard/media/logo.png' %}" alt="電祭" height="50" width="103" vspace="5"></a>
+      {% if user.is_authenticated %}
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/logout/">登出</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/setname/">個人資料</a></li>
+      </ul>
+      {% endif %}
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/leaderboard/">最跳排行榜</a></li>
+      </ul>
+
+<!--      <ul id="nav-mobile" class="sidenav"></ul> 
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+-->
+      <div class="dropdown-menu">
+        <span tabindex="0" onclick="return true"><i class="material-icons">menu</i></span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+      	  {% if user.is_authenticated %}
+          <li><a href="/" onclick="sampleMenu(this)" class="collection-item">電祭 / 惦記</a></li>
+          <li><a href="/game/" onclick="sampleMenu(this)" class="collection-item">ECE Jump !!</a></li>
+          <li><a href="/leaderboard/" onclick="sampleMenu(this)" class="collection-item">最跳排行榜</a></li>
+          <li><a href="/setname/" onclick="sampleMenu(this)" class="collection-item">個人資訊</a></li>
+          <li><a href="/logout/" onclick="sampleMenu(this)" class="collection-item">登出</a></li>
+	  {% else %}
+          <li><a href="/" onclick="sampleMenu(this)" class="collection-item">電祭 / 惦記</a></li>
+          <li><a href="/leaderboard/" onclick="sampleMenu(this)" class="collection-item">最跳排行榜</a></li>
+          <li><a href="{% url 'social:begin' 'github' %}" onclick="sampleMenu(this)" class="collection-item">使用GOOGLE帳號登入</a></li>
+	  {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% block content %}
+{% endblock %}
+
+</body>
+

@@ -1,0 +1,41 @@
+/*
+input{
+	-moz-transform: translate(100px, 50px);
+	-webkit-transform: translate(100px, 50px);
+	-o-transform: translate(100px, 50px);
+	-ms-transform: translate(100px, 50px);
+	transform: translate(100px, 50px);
+	margin: 0 auto;
+}
+*/
+
+
+body{
+	/*border: 10px groove #0DC2FF;
+	border-radius: 40px 0px 40px 0px;*/;
+	background-image: url("Background.jpeg");
+	background-size: 1300px 800px;
+	background-repeat: no-repeat;
+}
+
+/*body::before{
+	opacity: .4;
+}*/
+
+.input-field{
+	/*color: #FFFFFF;
+	background: #333333;
+	text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+	color: #FFFFFF;
+	background: #333333;*/
+}
+
+/*p{
+	border: 5px groove #A42F07;
+	border-radius: 40px 0px 40px 0px;
+}*/
+
+#button{
+	color: red;
+
+}

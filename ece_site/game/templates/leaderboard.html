@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+  <link rel="stylesheet" type="text/css" href="{% static 'leaderboard/css/main.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row center">
+	<div class="col s12 m12">
+	  <h2>最跳排行榜</h2>
+	</div>
+      </div>
+
+      <div class="row center">
+	<div class="col s12 m12">
+	  <h6 class="no">排名將於5/25(六)電機之夜開場時結算，前100名上榜玩家有機會獲得____,____等多項大獎。</h6>
+	</div>
+      </div>
+
+      <HR align=center width=100% color=#111111 SIZE=3>
+
+      <!--   Icon Section   -->
+      <div class="row">
+	{% for p in profile %}
+        <div class="col s12 m4">
+          <div class="icon-block">
+	    <h1 class="center">#{{ forloop.counter }}</h1>
+            <h5 class="center">{{ p.username }}</h5>
+
+            <p class="center light">曾經跳到 {{ p.scores }} 階那摸高</p>
+          </div>
+        </div>
+	{% endfor %}
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+	<!---<link rel="stylesheet" type="text/css" href="{% static 'leaderboard/css/setname.css' %}">--->
+{% endblock %}
+
+
+{% block content %}
+<body>
+<br>
+<br>
+  <div class="row">
+    <form class="col s12" method="get" action="">
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <input value="{{ player.username }}" name="username" type="text" class="validate"/>
+	  <label for="name" class="active">玩家暱稱</label>
+	  <span class="help-text" data-error="wrong" data-success="right">/ 字數上限:9 / 不能空白 /</span>
+	</div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <input placeholder="5/25(六)我一定會去從早看到晚ㄉ" name="thinking" type="text" class="validate"/>
+	  <label for="name" class="active">想對2019電機之日夜說的話</label>
+	</div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <input placeholder="我還在想欸" name="thinking" type="text" class="validate"/>
+	  <label for="name" class="active">等一下</label>
+	</div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+	  <button class="btn waves-effect waves-light red darken-1" type="submit" name="action">確認修改
+	    <i class="material-icons right">send</i>
+	  </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+{% endblock %}

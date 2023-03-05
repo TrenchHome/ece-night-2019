@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+  <link rel="stylesheet" type="text/css" href="{% static 'leaderboard/css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center red-text text-darken-1">ECE Jump</h1>
+      <div class="row center">
+        <h6 class="header col s12 white-text text-darken-1">/ 是一款真正的 /</h6> 
+        <h6 class="header col s12 white-text text-darken-1">/ 肥宅視角RPG遊戲 /</h6> 
+      </div>
+	<br>
+      <div class="row center">
+	{% if user.is_authenticated %}
+        <a href="/game/" id="download-button" class="btn-large waves-effect waves-light red darken-1">開始遊戲</a>
+	{% else %}
+        <a href="{% url 'social:begin' 'github' %}" id="download-button" class="btn-large waves-effect waves-light red darken-1">使用GitHub帳號登入</a>
+	{% endif %} 
+      </div>
+      <br><br><br>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row center">
+	<div class="col s12 m12">
+	  <h2>最跳排名</h2>
+	</div>
+	<div class="col s12 m12">
+	  <h6 class="no">排名將於5/25(六)電機之夜開場時結算，前100名上榜玩家有機會獲得____,____等多項大獎。</h6>
+	</div>
+      </div>
+      <HR align=center width=100% color=#111111 SIZE=3>
+
+      <!--   Icon Section   -->
+      <div class="row">
+	{% for p in profile %}
+        <div class="col s12 m4">
+          <div class="icon-block">
+	    <h1 class="center light-black-text">#{{forloop.counter}}</h1>
+<!--            <h2 class="center light-black-text"><i class="material-icons">face</i></h2> -->
+            <h5 class="center">{{ p.username }}</h5>
+
+            <p class="center light">曾經跳到 {{ p.scores }} 階那摸厲害</p>
+          </div>
+        </div>
+	{% endfor %}
+      </div>
+    </div>
+
+
+    <div class="row center">
+      <a href="/leaderboard/" id="download-button" class="btn-large waves-effect waves-light red darken-1">查看完整排行榜</a>
+    </div>
+      
+    <br><br>
+  </div>
+{% endblock %}

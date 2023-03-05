@@ -1,0 +1,87 @@
+
+h1{
+	font-size: 90px;
+	text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, -36px -39px 6px rgba(58,206,46,0), -36px -39px 6px rgba(58,206,46,0);
+	color: #DD160C;
+}
+
+h2{
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2), 2px 2px 2px rgba(206,89,55,0);
+	color: #DD160C;
+}
+
+h5{
+	font-size: 35px;
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2), 2px 2px 2px rgba(206,89,55,0);
+	color: #DD160C;
+}
+h6{
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2), 2px 2px 2px rgba(206,89,55,0);
+	color: #DD160C;
+}
+h6.no{
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2), 2px 2px 2px rgba(206,89,55,0);
+	color: #000000;
+}
+.section.no-pad-bot{
+	background-image: url("Background2.png");
+	background-size: 50% 100%;	
+}
+
+@media only screen and (min-width:481px) and (max-width: 768px) {
+	.section.no-pad-bot{
+		background-image: url("Background2.png");
+		background-size: 100% 100%;	
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.section.no-pad-bot{
+		background-image: url("Background2.png");
+		background-size: 200% 100%;	
+	}
+}
+/*
+.section.no-pad-bot:hover{
+	background-image: url("Background.jpeg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width:100%;
+	opacity:1;
+	-moz-opacity:1;
+	filter:alpha(opacity=1);
+}
+*/
+h5.center{
+	text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3), 2px 2px 2px rgba(206,89,55,0);
+	color: #000000;
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+	font-size: 25px;
+	letter-spacing: -0.8px;
+	word-spacing: 0.6px;
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+
+a{
+	font-size: 20px;
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+}
+
+p{
+	font-family: "Lucida Console", Microsoft JhengHei, monospace;
+	font-weight: bolder;
+}
+
+/*a.btn-large{
+	-webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 10px 16px 28px rgba(0,0,0,0.18); 
+	box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 10px 16px 28px rgba(0,0,0,0.18);
+	background: #1C6EA4;
+}*/
